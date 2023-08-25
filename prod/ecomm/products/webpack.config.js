@@ -1,3 +1,7 @@
+const Dotenv = require('dotenv-webpack');
+
+const webpack = require('webpack');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
@@ -22,6 +26,9 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
         template: './public/index.html'
-    })
+    }),
+    new webpack.EnvironmentPlugin({
+        ignoreStub: true}),
+    new Dotenv(),
    ]
 };

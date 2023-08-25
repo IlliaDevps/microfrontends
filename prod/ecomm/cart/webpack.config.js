@@ -1,6 +1,11 @@
+const Dotenv = require('dotenv-webpack');
+
+const webpack = require('webpack');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
+
 
 module.exports = {
     mode: 'development',
@@ -12,7 +17,7 @@ module.exports = {
             name: 'cart',
             filename: 'remoteEntry.js',
             exposes:{
-                './CartShow': './src/index'
+                './CartShow': './src/bootstrap'
             },
             shared : {
                 faker:{
@@ -22,6 +27,15 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template : './public/index.html'
-        })
-    ]
+        }),
+        new webpack.ProvidePlugin({
+            process: 'process/browser'
+          }),
+        new webpack.EnvironmentPlugin({
+            ignoreStub: true}),
+        new Dotenv(),
+
+         
+    ],
+ 
 }

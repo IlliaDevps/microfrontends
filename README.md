@@ -4,6 +4,13 @@ https://github.com/jgraph/drawio-desktop/releases/tag/v21.6.8
 
 https://discord.gg/vvcyvjDkdC
 
+always
+npm install dotenv
+npm install dotenv-webpack --save-dev
+npm install process
+
+
+
 cd prod/ecomm/products
 # this is for the microfrontend products
 npm init -y

@@ -1,6 +1,6 @@
 import faker from "faker";
 
-
+//const Node_ENV = process.env.NODE_ENV || 'development';
 
 const mount = (el) => {
     let products ='';
