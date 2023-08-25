@@ -1,11 +1,12 @@
 import React from'react';
 import ReactDom from 'react-dom';
+import App from './App';
 
 console.log(process.env.NODE_ENV);
 
 const mount = (el) => {
     ReactDom.render(
-        <h1>{'Hi there!'}</h1>,
+        <App />,
         el
         );
 };
