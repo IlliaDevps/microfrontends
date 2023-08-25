@@ -4,8 +4,12 @@
         <meta charset="UTF-8" />
         <link rel="shortcut icon" href="#" />
     </head>
-    <body>
+    <body> 
         <div id="my-products"></div>
         <div id="my-cart"></div>
+        <!--If you ever assign an id to an element , 
+            your browser it gonna try to create a new global variable
+        with the same exact name as that id, so make sure your html id 
+        and webpack.config.js/remoteEntry.js variable get different names-->
     </body>
 </html>
