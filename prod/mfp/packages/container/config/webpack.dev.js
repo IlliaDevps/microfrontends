@@ -1,14 +1,13 @@
 const {merge} = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const commonConfig = require('./webpack.common');
-
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const Dotenv = require('dotenv-webpack');
 
 const devConfig = {
     mode: 'development',
     devServer: {
-        port: 8081,
+        port: 8080,
         historyApiFallback: {
             index: '/index.html',
         }
@@ -19,14 +18,14 @@ const devConfig = {
             template: './public/index.html'
         }),
         new ModuleFederationPlugin({
-            name: 'marketing',
-            filename:'remoteEntry.js',
-            exposes: {
-              './MarketingApp': './src/bootstrap',
+            name: 'container',        
+            remotes: {
+                marketing: 'marketing@http://localhost:8081/remoteEntry.js',
+                // when the host is loaded will look for a remote 
+                // with the same name as the entry point. In this case will look inside 
+                // marketing webpack.config.js  new ModuleFederationPlugin({ name: 'marketing', ...
             },
-            shared:[
-                'react','react-dom'
-            ],
+            shared: ['react','react-dom']
         }),
         new Dotenv()
     ],
