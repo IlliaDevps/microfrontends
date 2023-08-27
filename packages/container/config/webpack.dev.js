@@ -14,7 +14,6 @@ const devConfig = {
         }
     },
     plugins: [
-        new Dotenv(),
         new ModuleFederationPlugin({
             name: 'container',        
             remotes: {
