@@ -1,8 +1,9 @@
 const {merge} = require('webpack-merge');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const commonConfig = require('./webpack.common');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
-const Dotenv = require('dotenv-webpack');
+const packageJson = require('../package.json');
+
 
 const devConfig = {
     mode: 'development',
@@ -13,10 +14,7 @@ const devConfig = {
         }
     },
     plugins: [
-        new HtmlWebpackPlugin({
-         
-            template: './public/index.html'
-        }),
+        new Dotenv(),
         new ModuleFederationPlugin({
             name: 'container',        
             remotes: {
@@ -25,9 +23,11 @@ const devConfig = {
                 // with the same name as the entry point. In this case will look inside 
                 // marketing webpack.config.js  new ModuleFederationPlugin({ name: 'marketing', ...
             },
-            shared: ['react','react-dom']
+            shared: packageJson.dependencies,
+            // shared to only use one copy of react in the container we get the shared 
+            // dependencies from the package.json file
         }),
-        new Dotenv()
+        
     ],
 };
 
