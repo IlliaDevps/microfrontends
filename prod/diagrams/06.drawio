@@ -393,7 +393,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="09 - workflow" id="q19JJgpx96n1u7joJIrE">
-        <mxGraphModel dx="596" dy="332" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" background="none" math="0" shadow="0">
+        <mxGraphModel dx="840" dy="332" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="kXCnNNd6yUoBEn6Ae9Qe-0"/>
                 <mxCell id="kXCnNNd6yUoBEn6Ae9Qe-1" parent="kXCnNNd6yUoBEn6Ae9Qe-0"/>
@@ -440,32 +440,32 @@
         </mxGraphModel>
     </diagram>
     <diagram id="MNwZ0J-KOYLSn6IJXTY1" name="10 - flow">
-        <mxGraphModel dx="501" dy="309" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+        <mxGraphModel dx="601" dy="212" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
             <root>
                 <mxCell id="MyS2acF3rVDEaGv9vF0M-0"/>
                 <mxCell id="MyS2acF3rVDEaGv9vF0M-1" parent="MyS2acF3rVDEaGv9vF0M-0"/>
-                <mxCell id="Gpv9G50uwAYpYkfL84Uh-7" value="Each team develops features on git branches named something like 'container-dev'" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=center;strokeColor=#919191;" vertex="1" parent="MyS2acF3rVDEaGv9vF0M-1">
+                <mxCell id="Gpv9G50uwAYpYkfL84Uh-7" value="Each team develops features on git branches named something like 'container-dev'" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=center;strokeColor=#919191;" parent="MyS2acF3rVDEaGv9vF0M-1" vertex="1">
                     <mxGeometry x="720" y="330" width="390" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="Gpv9G50uwAYpYkfL84Uh-8" value="" style="endArrow=classic;html=1;fontSize=18;" edge="1" parent="MyS2acF3rVDEaGv9vF0M-1">
+                <mxCell id="Gpv9G50uwAYpYkfL84Uh-8" value="" style="endArrow=classic;html=1;fontSize=18;" parent="MyS2acF3rVDEaGv9vF0M-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="710" y="330" as="sourcePoint"/>
                         <mxPoint x="710" y="620" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="Gpv9G50uwAYpYkfL84Uh-10" value="Feature complete and ready for deployment? Push branch to github" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=center;strokeColor=#919191;" vertex="1" parent="MyS2acF3rVDEaGv9vF0M-1">
+                <mxCell id="Gpv9G50uwAYpYkfL84Uh-10" value="Feature complete and ready for deployment? Push branch to github" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=center;strokeColor=#919191;" parent="MyS2acF3rVDEaGv9vF0M-1" vertex="1">
                     <mxGeometry x="720" y="380" width="390" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="Gpv9G50uwAYpYkfL84Uh-11" value="Create a pull request to merge into master/main" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=center;strokeColor=#919191;" vertex="1" parent="MyS2acF3rVDEaGv9vF0M-1">
+                <mxCell id="Gpv9G50uwAYpYkfL84Uh-11" value="Create a pull request to merge into master/main" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=center;strokeColor=#919191;" parent="MyS2acF3rVDEaGv9vF0M-1" vertex="1">
                     <mxGeometry x="720" y="430" width="390" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="Gpv9G50uwAYpYkfL84Uh-12" value="Other engineers review" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=center;strokeColor=#919191;" vertex="1" parent="MyS2acF3rVDEaGv9vF0M-1">
+                <mxCell id="Gpv9G50uwAYpYkfL84Uh-12" value="Other engineers review" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=center;strokeColor=#919191;" parent="MyS2acF3rVDEaGv9vF0M-1" vertex="1">
                     <mxGeometry x="720" y="480" width="390" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="Gpv9G50uwAYpYkfL84Uh-13" value="When ready to deploy, merge the PR" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=center;strokeColor=#919191;" vertex="1" parent="MyS2acF3rVDEaGv9vF0M-1">
+                <mxCell id="Gpv9G50uwAYpYkfL84Uh-13" value="When ready to deploy, merge the PR" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=center;strokeColor=#919191;" parent="MyS2acF3rVDEaGv9vF0M-1" vertex="1">
                     <mxGeometry x="720" y="530" width="390" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="Gpv9G50uwAYpYkfL84Uh-14" value="Workflow detects a change to the master/main branch, deployment runs!" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=center;strokeColor=#919191;" vertex="1" parent="MyS2acF3rVDEaGv9vF0M-1">
+                <mxCell id="Gpv9G50uwAYpYkfL84Uh-14" value="Workflow detects a change to the master/main branch, deployment runs!" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=center;strokeColor=#919191;" parent="MyS2acF3rVDEaGv9vF0M-1" vertex="1">
                     <mxGeometry x="720" y="580" width="390" height="40" as="geometry"/>
                 </mxCell>
             </root>
