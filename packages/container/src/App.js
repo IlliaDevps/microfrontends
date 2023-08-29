@@ -1,5 +1,7 @@
 import React from 'react';
+import {BrowserRouter} from 'react-router-dom';
 import MarketingApp from './components/MarketingApp';
+import Header from './components/Header';
 //MarketingApp is the name of the exposes: 
 //{'./MarketingApp': './src/bootstrap'} in the 
 //webpack.config.js ModuleFederationPlugin 
@@ -8,10 +10,11 @@ import MarketingApp from './components/MarketingApp';
 
 export default () => {
     return (
-        <div>
-            <h1>Hi there testing new Github pull request !!!! now is working</h1>
-            <hr />
-            <MarketingApp />
-        </div>
+        <BrowserRouter>
+            <div>
+                <Header />
+                <MarketingApp />
+            </div>
+        </BrowserRouter>
     );
 }
