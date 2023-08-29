@@ -1,3 +1,14 @@
+//Material-ui is a React component library that make
+//use of css-in-js
+// CSS scoping Solutions
+// When you are writing for your project
+//1 - Use CSS-in-JS library
+//2- Use Vue's or Angular's component style scoping
+//3- "Namespace" all your CSS
+// CSS coming from a component library or CSS library (bootstrap)
+//1- Use a component library that does css-in-js
+//2- Manually build the css library and apply namespacing techniques to it
+
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
