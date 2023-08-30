@@ -8,6 +8,7 @@ export default () => {
 
     useEffect(() => {
         const { onParentNavigate } = mount(ref.current, {
+          initialPath: history.location.pathname,  
           onNavigate: ({pathname:nextPathname}) => { 
                 //console.log(nextPathname);
                 const {pathname} = history.location; //This is path that we are currently inside in our container app
