@@ -15,13 +15,17 @@ const generateClassName = createGenerateClassName({
 //This is used to generate unique class names for your components.
 //instead of the prefix jss will generate with the prefix ma.
 
-export default ({ history }) => {  
+export default ({ history, onSignIn }) => {  
     return <div>
         <StylesProvider generateClassName={generateClassName}>
             <Router history={history} >
                 <Switch>
-                    <Route exact path="/auth/signin" component={Signin} />
-                    <Route exact path="/auth/signup" component={Signup} />
+                    <Route  path="/auth/signin">
+                        <Signin onSignIn={onSignIn} />
+                    </Route>
+                    <Route  path="/auth/signup">    
+                        <Signup onSignIn={onSignIn}/> 
+                    </Route>
                 </Switch>
             </Router>
         </StylesProvider>

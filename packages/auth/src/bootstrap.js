@@ -7,13 +7,13 @@ import App from './App';
 const node_env = process.env.NODE_ENV || 'development';
 
 //Mount function to start up the app
-const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
+const mount = (el, {onSignIn, onNavigate, defaultHistory, initialPath }) => {
     const history = defaultHistory || createMemoryHistory({ initialEntries: [initialPath] });
 
     if(onNavigate){
         history.listen(onNavigate)
     }
-    ReactDom.render(<App history={history}/>, el);
+    ReactDom.render(<App onSignIn={onSignIn} history={history}/>, el);
     return {
         onParentNavigate({pathname:nextPathname}){
             //console.log(location.pathname);
