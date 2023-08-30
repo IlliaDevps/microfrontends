@@ -21,7 +21,7 @@ const devConfig = {
             remotes: {
                 marketing: 'marketing@http://localhost:8081/remoteEntry.js',
                 auth: 'auth@http://localhost:8082/remoteEntry.js',
-                //dashboard: 'dashboard@http://localhost:8083/remoteEntry.js',
+                dashboard: 'dashboard@http://localhost:8083/remoteEntry.js',
 
                 // when the host is loaded will look for a remote 
                 // with the same name as the entry point. In this case will look inside 

@@ -1,6 +1,6 @@
 //const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { VueLoaderPlugin } = require ('vue-loader')
+const { VueLoaderPlugin } = require ('vue-loader');
 
 
 module.exports = {
@@ -20,11 +20,11 @@ module.exports = {
                 ]
             },
             {
-                test: /\.vue$ /, 
+                test: /\.vue$/, 
                 use: 'vue-loader',
             },
             {
-                test: /\.scss |\.css$/,
+                test: /\.scss|\.css$/,
                 use: ['vue-style-loader', 'style-loader', 'css-loader', 'sass-loader']
 
             },
@@ -43,7 +43,7 @@ module.exports = {
     },
     plugins: [
        // new Dotenv(),
-        new VueLoaderPlugin,
+        new VueLoaderPlugin() ,
         new HtmlWebpackPlugin({
             template: './public/index.html'
         }),
