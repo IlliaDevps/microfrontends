@@ -1,4 +1,4 @@
-import { mount } from 'marketing/MarketingApp';
+import { mount } from 'auth/AuthApp';
 import React, {useRef, useEffect} from 'react';
 import{useHistory} from'react-router-dom';
 
@@ -8,7 +8,7 @@ export default () => {
 
     useEffect(() => {
         const { onParentNavigate } = mount(ref.current, {
-          initialPath: history.location.pathname,  
+          initialPath: history.location.pathname, //we are passing to mount the path that we are currently inside in our container app
           onNavigate: ({pathname:nextPathname}) => { 
                 //console.log(nextPathname);
                 const {pathname} = history.location; //This is path that we are currently inside in our container app
