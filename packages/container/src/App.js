@@ -21,8 +21,10 @@ const generateClassName = createGenerateClassName({
 });
 
 export default () => {
+    
     const [isSignedIn, setIsSignedIn] = useState (false) // react Hooks look later and declaring a peace of states
-    // check later to use a state management library like Redux
+    // check later to use a state management library like Redux ...
+
 
     return (
         <BrowserRouter>

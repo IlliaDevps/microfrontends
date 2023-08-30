@@ -13,7 +13,7 @@ const generateClassName = createGenerateClassName({
 });
 //This is the prefix that will be applied to the generated class names. 
 //This is used to generate unique class names for your components.
-//instead of the prefix jss will generate with the prefix ma.
+//instead of the prefix jss will generate with the prefix ma...
 
 export default ({ history, onSignIn }) => {  
     return <div>
